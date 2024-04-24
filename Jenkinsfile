@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t wariedap/paymentservice:latest ."
+                        sh "docker build -t osanyap/paymentservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push wariedap/paymentservice:latest "
+                        sh "docker push osanyap/paymentservice:latest "
                     }
                 }
             }
