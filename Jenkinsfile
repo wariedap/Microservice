@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t wariedap/recommendationservice:latest ."
+                        sh "docker build -t osanyap/recommendationservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push wariedap/recommendationservice:latest "
+                        sh "docker push osanyap/recommendationservice:latest "
                     }
                 }
             }
